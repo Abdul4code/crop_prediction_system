@@ -16,7 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from crop_api.views import prediction
+from crop_api.views import home
+from crop_api.views import plant
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('predict', prediction),
+    path('home', home),
+    path('race', plant),
 ]
